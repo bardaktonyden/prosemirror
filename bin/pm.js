@@ -46,6 +46,7 @@ function showHelp() {
 
 function help(status) {
   console.log(`Usage:
+
   pm install [--ssh]      Clone and symlink the packages, install dependencies, build
   pm build                Build all modules
   pm status               Print out the git status of packages
@@ -64,6 +65,7 @@ function help(status) {
   pm dev-start            Start development server
   pm dev-stop             Stop development server, if running
   pm --help`)
+            
   process.exit(status)
 }
 
