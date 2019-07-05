@@ -33,15 +33,19 @@ function run(bench, options) {
       if (view) view.updateState(state)
     }
   }
+  
   var profile = document.querySelector("#profile").checked
   if (profile) console.profile(options.name)
   for (var i = 0, e = options.repeat || 1; i < e; i++) {
     state = startState
     bench(options, callback)
   }
+  
   if (profile) console.profileEnd(options.name)
   console.log("'" + options.name + "' took " + (Date.now() - t0) + "ms for " + steps + " steps")
 }
+
+    //  ampale system resech 
 
 group("Type out a document", button("Plain", () => {
   run(typeDoc, {doc: example, name: "Type plain", profile: true, repeat: 6})
